@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Müzik Atölyem - Yönetim Paneli (Admin)">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Müzik Atölyem | Yönetim Paneli</title>
+  <link rel="icon" href="img/core-img/favicon.ico" />
+  <link rel="stylesheet" href="style.css" />
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <style>
+    /* Panel’e özel stiller */
+    .admin-badge{font-size:12px;padding:2px 8px;border-radius:999px;background:#222;color:#fff;margin-left:8px}
+    .dashboard-cards .card{border:0;border-radius:16px;box-shadow:0 10px 25px rgba(0,0,0,.06)}
+    .dashboard-cards .card .card-body{padding:20px}
+    .stat-kpi{font-size:28px;font-weight:700;line-height:1}
+    
+    /* Grafik Kartları İçin Stil */
+    .chart-card { border:0; border-radius:16px; box-shadow:0 10px 25px rgba(0,0,0,.06); padding: 20px; background: #fff; height: 100%; }
+    
+    .table thead th{border-top:0;border-bottom:2px solid rgba(0,0,0,.05)}
+    .form-section{border:1px dashed rgba(0,0,0,.1); border-radius:16px; padding:18px}
+    .sticky-actions{position:sticky;bottom:0;background:#fff;padding-top:8px}
+    @media(max-width: 576px){
+      .stat-kpi{font-size:22px}
+    }
+  </style>
+</head>
+<body>
+  <div class="preloader d-flex align-items-center justify-content-center">
+    <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+  </div>
+
+  <header class="header-area">
+        <div class="oneMusic-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <nav class="classy-navbar justify-content-between" id="oneMusicNav">
+
+                        <a href="index.html" class="nav-brand" style="display: flex; align-items: center; text-decoration: none;">
+                            <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="margin-right: 10px;">
+                                <circle cx="50" cy="50" r="48" stroke="white" stroke-width="4" fill="none" />
+                                <path d="M35 65a10 10 0 1 0 20 0V35h15v-10h-25z" fill="white" />
+                            </svg>
+                            <span style="font-family: 'Archivo Narrow', sans-serif; font-weight: 700; font-size: 24px; color: #fff; letter-spacing: 2px; text-transform: uppercase;">
+                                MÜZİK<span style="font-weight: 300;">ATÖLYEM</span>
+                            </span>
+                        </a>
+
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <div class="classy-menu">
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <div class="classynav">
+                                <ul>
+                                    <li><a href="index.html">Ana Sayfa</a></li>
+                                    
+                                    <li><a href="#">Kurumsal</a>
+                                        <ul class="dropdown">
+                                            <li><a href="kurumsal.html#hakkimizda">Hakkımızda</a></li>
+                                            <li><a href="kurumsal.html#misyon">Misyon & Vizyon</a></li>
+                                            <li><a href="kurumsal.html#birimler">Birimlerimiz</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li><a href="albums-store.html">Albümler</a>
+                                        <ul class="dropdown">
+                                            <li><a href="album-sgp-bpg.html">Sagopa Kajmer - BPG</a></li>
+                                            <li><a href="album-mtv-dlx.html">Motive - Makaveli</a></li>
+                                            <li><a href="album-sbnm-frh-od.html">Şebnem Ferah - OD</a></li>
+                                            <li><a href="album-scrpn-crzywrld.html">Scorpions - Crazy</a></li>
+                                            <li><a href="album-uzi-gng.html">Uzi - GNG</a></li>
+                                            <li><a href="album-mnfst-mnfstvl.html">Manifest - Manifestival</a></li>
+                                            <li><a href="album-snsnr-insn.html">Sena Şener - İnsan</a></li>
+                                            <li style="border-top: 1px solid rgba(255,255,255,0.1);"><a href="albums-store.html">Tümünü Gör (+10)</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li><a href="event.html">Etkinlikler</a></li>
+                                    <li><a href="blog.html">Haberler</a></li>
+                                    <li><a href="contact.html">İletişim</a></li>
+                                    <li><a href="elements.html">Bileşenler</a></li>
+                                </ul>
+
+                                <div class="login-register-cart-button d-flex align-items-center">
+                                    <div class="login-register-btn mr-50">
+                                        <a href="login.html" id="loginBtn">Giriş / Kayıt</a>
+                                    </div>
+                                    <div class="cart-btn">
+                                        <p><span class="icon-shopping-cart" aria-hidden="true"></span> <span class="quantity">1</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+  <section class="breadcumb-area bg-img bg-overlay" style="background-image:url(img/bg-img/breadcumb3.jpg);">
+    <div class="bradcumbContent">
+      <p>Yönetim</p>
+      <h2>Panel & İstatistikler</h2>
+    </div>
+  </section>
+
+  <section class="section-padding-100">
+    <div class="container">
+      
+      <div class="row dashboard-cards mb-50">
+        <div class="col-12 col-sm-6 col-lg-4 mb-30">
+          <div class="card">
+            <div class="card-body d-flex align-items-center justify-content-between">
+              <div>
+                <h6 class="mb-1">Toplam Albüm</h6>
+                <div class="stat-kpi" id="kpi-album">24</div>
+              </div>
+              <span class="icon-music" style="font-size:28px;"></span>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4 mb-30">
+          <div class="card">
+            <div class="card-body d-flex align-items-center justify-content-between">
+              <div>
+                <h6 class="mb-1">Yaklaşan Etkinlik</h6>
+                <div class="stat-kpi" id="kpi-event">7</div>
+              </div>
+              <span class="icon-calendar" style="font-size:28px;"></span>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4 mb-30">
+          <div class="card">
+            <div class="card-body d-flex align-items-center justify-content-between">
+              <div>
+                <h6 class="mb-1">Yayınlanan Haber</h6>
+                <div class="stat-kpi" id="kpi-news">12</div>
+              </div>
+              <span class="icon-message" style="font-size:28px;"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mb-70">
+        <div class="col-12">
+            <h5 class="mb-20">Sayılarla Müzik Atölyem (İstatistikler)</h5>
+        </div>
+        <div class="col-12 col-lg-6 mb-30">
+            <div class="chart-card">
+                <h6 class="text-center mb-3">Aylık Web Sitesi Ziyaretçileri</h6>
+                <canvas id="visitorsChart"></canvas>
+            </div>
+        </div>
+        <div class="col-12 col-lg-6 mb-30">
+            <div class="chart-card">
+                <h6 class="text-center mb-3">Site İçerik Dağılımı</h6>
+                <canvas id="contentChart"></canvas>
+            </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-lg-6 mb-50">
+          <h5 class="mb-20">Albüm Ekle</h5>
+          <div class="form-section">
+            <form id="formAlbum" onsubmit="return addAlbumRow(event)">
+              <div class="form-group">
+                <label>Albüm Adı</label>
+                <input type="text" class="form-control" id="albumTitle" placeholder="Örn: Beyond Time" required>
+              </div>
+              <div class="form-group">
+                <label>Sanatçı</label>
+                <input type="text" class="form-control" id="albumArtist" placeholder="Örn: The Cure" required>
+              </div>
+              <div class="form-group">
+                <label>Çıkış Tarihi</label>
+                <input type="date" class="form-control" id="albumDate" required>
+              </div>
+              <div class="sticky-actions text-right">
+                <button class="btn oneMusic-btn" type="submit">Kaydet <i class="fa fa-angle-double-right"></i></button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-6 mb-50">
+          <h5 class="mb-20">Etkinlik Ekle</h5>
+          <div class="form-section">
+            <form id="formEvent" onsubmit="return addEventRow(event)">
+              <div class="form-group">
+                <label>Etkinlik Adı</label>
+                <input type="text" class="form-control" id="eventTitle" placeholder="Örn: Bahar Festivali" required>
+              </div>
+              <div class="form-group">
+                <label>Tarih</label>
+                <input type="date" class="form-control" id="eventDate" required>
+              </div>
+              <div class="form-group">
+                <label>Konum</label>
+                <input type="text" class="form-control" id="eventPlace" placeholder="Örn: Kadıköy / İstanbul" required>
+              </div>
+              <div class="sticky-actions text-right">
+                <button class="btn oneMusic-btn" type="submit">Kaydet <i class="fa fa-angle-double-right"></i></button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <h5 class="mb-20">Hızlı Liste (Önizleme)</h5>
+          <div class="table-responsive">
+            <table class="table" id="adminTable">
+              <thead>
+                <tr>
+                  <th>Tip</th>
+                  <th>Başlık</th>
+                  <th>Ek Alan</th>
+                  <th>Tarih</th>
+                  <th class="text-right">İşlemler</th>
+                </tr>
+              </thead>
+              <tbody>
+                </tbody>
+            </table>
+          </div>
+          <p class="text-muted mt-2">Not: Bu panel bir demodur.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-area" style="background-color: #000; padding: 80px 0 30px;">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-12 col-md-4 mb-50">
+                    <a href="index.html" style="display: flex; align-items: center; text-decoration: none; margin-bottom: 20px;">
+                        <svg width="30" height="30" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="margin-right: 10px;">
+                            <circle cx="50" cy="50" r="48" stroke="white" stroke-width="4" fill="none" />
+                            <path d="M35 65a10 10 0 1 0 20 0V35h15v-10h-25z" fill="white" />
+                        </svg>
+                        <span style="font-family: 'Archivo Narrow', sans-serif; font-weight: 700; font-size: 18px; color: #fff; letter-spacing: 2px; text-transform: uppercase;">
+                            MÜZİK<span style="font-weight: 300;">ATÖLYEM</span>
+                        </span>
+                    </a>
+                    <p style="color: #787878; line-height: 1.8; font-size: 14px;">
+                        Müzik Atölyem, 2010 yılından beri notaların gücüne inananlar için kurulmuş dijital bir platformdur. En güncel albümler, konser haberleri ve sanatçı biyografileriyle müziğin kalbi burada atıyor.
+                    </p>
+                </div>
+
+                <div class="col-12 col-md-4 mb-50">
+                    <h5 style="color: #fff; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 2px; font-size: 16px;">Hızlı Erişim</h5>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 10px;"><a href="index.html" style="color: #787878; font-size: 14px;">Ana Sayfa</a></li>
+                        <li style="margin-bottom: 10px;"><a href="kurumsal.html" style="color: #787878; font-size: 14px;">Kurumsal</a></li>
+                        <li style="margin-bottom: 10px;"><a href="albums-store.html" style="color: #787878; font-size: 14px;">Albümler</a></li>
+                        <li style="margin-bottom: 10px;"><a href="event.html" style="color: #787878; font-size: 14px;">Etkinlikler & Konserler</a></li>
+                        <li style="margin-bottom: 10px;"><a href="contact.html" style="color: #787878; font-size: 14px;">İletişim</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md-4 mb-50">
+                    <h5 style="color: #fff; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 2px; font-size: 16px;">Bize Ulaşın</h5>
+                    
+                    <p style="color: #787878; margin-bottom: 10px; font-size: 14px;">
+                        <i class="fa fa-map-marker" style="margin-right: 10px;"></i> Caferağa Mah. Moda Cad. No:42<br>
+                        <span style="margin-left: 20px;">Kadıköy / İstanbul</span>
+                    </p>
+                    <p style="color: #787878; margin-bottom: 10px; font-size: 14px;">
+                        <i class="fa fa-phone" style="margin-right: 10px;"></i> +90 (216) 555 44 33
+                    </p>
+                    <p style="color: #787878; margin-bottom: 30px; font-size: 14px;">
+                        <i class="fa fa-envelope" style="margin-right: 10px;"></i> info@muzikatolyem.com
+                    </p>
+
+                    <div class="footer-social-info">
+                        <a href="#" style="color: #fff; margin-right: 15px; font-size: 16px;"><i class="fa fa-instagram"></i></a>
+                        <a href="#" style="color: #fff; margin-right: 15px; font-size: 16px;"><i class="fa fa-twitter"></i></a>
+                        <a href="#" style="color: #fff; margin-right: 15px; font-size: 16px;"><i class="fa fa-youtube-play"></i></a>
+                        <a href="#" style="color: #fff; font-size: 16px;"><i class="fa fa-spotify"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div style="border-top: 1px solid #333; margin-top: 20px; padding-top: 20px; text-align: center;">
+                        <p class="copywrite-text" style="margin-bottom: 0;">
+                            Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                            Tüm hakları saklıdır | Tasarım & Kodlama: <a href="#" style="color: #fff; font-weight: bold;">Eren Dağlı</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+  <script src="js/jquery/jquery-2.2.4.min.js"></script>
+  <script src="js/bootstrap/popper.min.js"></script>
+  <script src="js/bootstrap/bootstrap.min.js"></script>
+  <script src="js/plugins/plugins.js"></script>
+  <script src="js/active.js"></script>
+  
+  <script>
+    // --- 1. GRAFİK KODLARI (Chart.js) ---
+    
+    // Ziyaretçi Grafiği (Bar Chart)
+    const ctxVisitor = document.getElementById('visitorsChart').getContext('2d');
+    new Chart(ctxVisitor, {
+        type: 'bar',
+        data: {
+            labels: ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran'],
+            datasets: [{
+                label: 'Ziyaretçi Sayısı',
+                data: [1200, 1900, 3000, 5000, 2300, 3400],
+                backgroundColor: 'rgba(0, 0, 0, 0.7)', // Temaya uygun siyah
+                borderColor: 'rgba(0, 0, 0, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: { y: { beginAtZero: true } }
+        }
+    });
+
+    // İçerik Dağılımı Grafiği (Pie Chart)
+    const ctxContent = document.getElementById('contentChart').getContext('2d');
+    new Chart(ctxContent, {
+        type: 'doughnut', 
+        data: {
+            labels: ['Albümler', 'Haberler', 'Etkinlikler'],
+            datasets: [{
+                label: 'İçerik Sayısı',
+                data: [24, 12, 7], // KPI'daki sayılarla eşleştirdim
+                backgroundColor: [
+                    'rgba(0, 0, 0, 0.9)',   // Koyu Siyah
+                    'rgba(80, 80, 80, 0.7)', // Gri
+                    'rgba(160, 160, 160, 0.5)' // Açık Gri
+                ],
+                hoverOffset: 4
+            }]
+        }
+    });
+
+    // --- 2. DEMO VERİ GİRİŞ FONKSİYONLARI ---
+    
+    const tableBody = () => document.querySelector('#adminTable tbody');
+
+    function addRow({tip, baslik, ek, tarih}) {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td><span class="badge badge-dark">${tip}</span></td>
+        <td>${baslik}</td>
+        <td>${ek || '-'}</td>
+        <td>${tarih || '-'}</td>
+        <td class="text-right">
+          <button class="btn btn-sm btn-outline-danger" onclick="deleteRow(this)">Sil</button>
+        </td>`;
+      tableBody().prepend(tr);
+      
+      // KPI Güncelleme Animasyonu
+      if(tip==='Albüm') bumpKpi('kpi-album');
+      if(tip==='Etkinlik') bumpKpi('kpi-event');
+    }
+
+    function bumpKpi(id){
+      const el = document.getElementById(id);
+      let v = parseInt(el.textContent, 10) || 0;
+      el.textContent = v + 1;
+      // Basit bir renk efekti
+      el.style.color = 'red';
+      setTimeout(() => el.style.color = '', 500);
+    }
+
+    function addAlbumRow(e){
+      e.preventDefault();
+      const t = document.getElementById('albumTitle').value.trim();
+      const a = document.getElementById('albumArtist').value.trim();
+      const d = document.getElementById('albumDate').value;
+      addRow({tip:'Albüm', baslik:t, ek:a, tarih:d});
+      alert('Albüm başarıyla eklendi!');
+      e.target.reset();
+      return false;
+    }
+
+    function addEventRow(e){
+      e.preventDefault();
+      const t = document.getElementById('eventTitle').value.trim();
+      const p = document.getElementById('eventPlace').value.trim();
+      const d = document.getElementById('eventDate').value;
+      addRow({tip:'Etkinlik', baslik:t, ek:p, tarih:d});
+      alert('Etkinlik takvime eklendi!');
+      e.target.reset();
+      return false;
+    }
+
+    function deleteRow(btn){
+      if(confirm('Silmek istediğinize emin misiniz?')) {
+        const tr = btn.closest('tr');
+        tr.remove();
+      }
+    }
+  </script>
+</body>
+</html>

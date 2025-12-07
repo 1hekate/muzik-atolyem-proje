@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Müzik Atölyem - Albümler, yeni çıkanlar, şarkılar ve müzik içerikleri">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Müzik Atölyem | Albümler</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/core-img/favicon.ico">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="lds-ellipsis">
+            <div></div><div></div><div></div><div></div>
+        </div>
+    </div>
+
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+        <div class="oneMusic-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <nav class="classy-navbar justify-content-between" id="oneMusicNav">
+
+                        <a href="index.html" class="nav-brand" style="display: flex; align-items: center; text-decoration: none;">
+                            <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="margin-right: 10px;">
+                                <circle cx="50" cy="50" r="48" stroke="white" stroke-width="4" fill="none" />
+                                <path d="M35 65a10 10 0 1 0 20 0V35h15v-10h-25z" fill="white" />
+                            </svg>
+                            <span style="font-family: 'Archivo Narrow', sans-serif; font-weight: 700; font-size: 24px; color: #fff; letter-spacing: 2px; text-transform: uppercase;">
+                                MÜZİK<span style="font-weight: 300;">ATÖLYEM</span>
+                            </span>
+                        </a>
+
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <div class="classy-menu">
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <div class="classynav">
+                                <ul>
+                                    <li><a href="index.html">Ana Sayfa</a></li>
+                                    
+                                    <li><a href="#">Kurumsal</a>
+                                        <ul class="dropdown">
+                                            <li><a href="kurumsal.html#hakkimizda">Hakkımızda</a></li>
+                                            <li><a href="kurumsal.html#misyon">Misyon & Vizyon</a></li>
+                                            <li><a href="kurumsal.html#birimler">Birimlerimiz</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li><a href="albums-store.html">Albümler</a>
+                                        <ul class="dropdown">
+                                            <li><a href="album-sgp-bpg.html">Sagopa Kajmer - BPG</a></li>
+                                            <li><a href="album-mtv-dlx.html">Motive - Makaveli</a></li>
+                                            <li><a href="album-sbnm-frh-od.html">Şebnem Ferah - OD</a></li>
+                                            <li><a href="album-scrpn-crzywrld.html">Scorpions - Crazy</a></li>
+                                            <li><a href="album-uzi-gng.html">Uzi - GNG</a></li>
+                                            <li><a href="album-mnfst-mnfstvl.html">Manifest - Manifestival</a></li>
+                                            <li><a href="album-snsnr-insn.html">Sena Şener - İnsan</a></li>
+                                            <li style="border-top: 1px solid rgba(255,255,255,0.1);"><a href="albums-store.html">Tümünü Gör (+10)</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li><a href="event.html">Etkinlikler</a></li>
+                                    <li><a href="blog.html">Haberler</a></li>
+                                    <li><a href="contact.html">İletişim</a></li>
+                                    <li><a href="elements.html">Bileşenler</a></li>
+                                </ul>
+
+                                <div class="login-register-cart-button d-flex align-items-center">
+                                    <div class="login-register-btn mr-50">
+                                        <a href="login.html" id="loginBtn">Giriş / Kayıt</a>
+                                    </div>
+                                    <div class="cart-btn">
+                                        <p><span class="icon-shopping-cart" aria-hidden="true"></span> <span class="quantity">1</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+
+    <!-- ##### Breadcumb Area Start ##### -->
+    <section class="breadcumb-area bg-img bg-overlay" style="background-image: url(img/bg-img/breadcumb3.jpg);">
+        <div class="bradcumbContent">
+            <p>Günceli keşfet</p>
+            <h2>Albümler</h2>
+        </div>
+    </section>
+    <!-- ##### Breadcumb Area End ##### -->
+
+    <!-- ##### Album Category Area Start ##### -->
+    <section class="album-catagory section-padding-100-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Tar filtreleri -->
+                    <div class="browse-by-catagories catagory-menu d-flex flex-wrap align-items-center mb-70">
+                        <a href="#" data-filter="*">Tümünü Göster</a>
+                        <a href="#" data-filter=".a" class="active">A</a>
+                        <a href="#" data-filter=".b">B</a>
+                        <a href="#" data-filter=".c">C</a>
+                        <a href="#" data-filter=".d">D</a>
+                        <a href="#" data-filter=".e">E</a>
+                        <a href="#" data-filter=".f">F</a>
+                        <a href="#" data-filter=".g">G</a>
+                        <a href="#" data-filter=".h">H</a>
+                        <a href="#" data-filter=".i">I</a>
+                        <a href="#" data-filter=".j">J</a>
+                        <a href="#" data-filter=".k">K</a>
+                        <a href="#" data-filter=".l">L</a>
+                        <a href="#" data-filter=".m">M</a>
+                        <a href="#" data-filter=".n">N</a>
+                        <a href="#" data-filter=".o">O</a>
+                        <a href="#" data-filter=".p">P</a>
+                        <a href="#" data-filter=".q">Q</a>
+                        <a href="#" data-filter=".r">R</a>
+                        <a href="#" data-filter=".s">S</a>
+                        <a href="#" data-filter=".t">T</a>
+                        <a href="#" data-filter=".u">U</a>
+                        <a href="#" data-filter=".v">V</a>
+                        <a href="#" data-filter=".w">W</a>
+                        <a href="#" data-filter=".x">X</a>
+                        <a href="#" data-filter=".y">Y</a>
+                        <a href="#" data-filter=".z">Z</a>
+                        <a href="#" data-filter=".number">0-9</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row oneMusic-albums">
+
+                <!-- Single Album -->
+                <div class="col-12 col-sm-4 col-md-3 col-lg-2 single-album-item t c p">
+                    <div class="single-album">
+                        <img src="img/bg-img/sgpbpg.jpg" alt="Sagopa - BPG kapak">
+                        <div class="album-info">
+                            <a href="album-sgp-bpg.html"><h5>Bir Pesimistin Gözyaşları</h5></a>
+                            <p>Sagopa Kajmer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Album -->
+                <div class="col-12 col-sm-4 col-md-3 col-lg-2 single-album-item s e q">
+                    <div class="single-album">
+                        <img src="img/bg-img/sbnmfrhod.png" alt="Şebnem Ferah - OD">
+                        <div class="album-info">
+                            <a href="album-sbnm-frh-od.html"><h5>OD</h5></a>
+                            <p>Şebnem Ferah</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Album -->
+                <div class="col-12 col-sm-4 col-md-3 col-lg-2 single-album-item w f r">
+                    <div class="single-album">
+                        <img src="img/bg-img/mnfstvl.jpg" alt="Manifest - Manifestival">
+                        <div class="album-info">
+                            <a href="album-mnfst-mnfstvl.html"><h5>Manifestival</h5></a>
+                            <p>Manifest</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Album -->
+                <div class="col-12 col-sm-4 col-md-3 col-lg-2 single-album-item b j y">
+                    <div class="single-album">
+                        <img src="img/bg-img/scrpn-crzywrld.jpeg" alt="Scorpion Crazy World">
+                        <div class="album-info">
+                            <a href="album-scrpn-crzywrld.html"><h5>Crayz World</h5></a>
+                            <p>Scorpion</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Album -->
+                <div class="col-12 col-sm-4 col-md-3 col-lg-2 single-album-item d h v">
+                    <div class="single-album">
+                        <img src="img/bg-img/uzigng.jpg" alt="Uzi - Parti patlar GNG'de">
+                        <div class="album-info">
+                            <a href="album-uzi-gng.html"><h5>GNG</h5></a>
+                            <p>Uzi</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Album -->
+                <div class="col-12 col-sm-4 col-md-3 col-lg-2 single-album-item t i x">
+                    <div class="single-album">
+                        <img src="img/bg-img/mtvdlx.png" alt="Motive Deluxe">
+                        <div class="album-info">
+                            <a href="album-mtv-dlx.html"><h5>Makaveli(Deluxe)</h5></a>
+                            <p>Motive</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Album -->
+                <div class="col-12 col-sm-4 col-md-3 col-lg-2 single-album-item b j y">
+                    <div class="single-album">
+                        <img src="img/bg-img/snsnr.jpg" alt="Sena Sener İnsan Gelir İnsan Geçer">
+                        <div class="album-info">
+                            <a href="album-snsnr-insn.html"><h5>İnsan Gelir İnsan Geçer</h5></a>
+                            <p>Sena Şener</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Album -->
+                <div class="col-12 col-sm-4 col-md-3 col-lg-2 single-album-item a k z">
+                    <div class="single-album">
+                        <img src="img/bg-img/a8.jpg" alt="Aam Smith - Underground kapak">
+                        <div class="album-info">
+                            <a href="#"><h5>Aam Smith</h5></a>
+                            <p>Underground</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Album -->
+                <div class="col-12 col-sm-4 col-md-3 col-lg-2 single-album-item w l number">
+                    <div class="single-album">
+                        <img src="img/bg-img/a9.jpg" alt="Will I Am - First kapak">
+                        <div class="album-info">
+                            <a href="#"><h5>Will I am</h5></a>
+                            <p>First</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Album -->
+                <div class="col-12 col-sm-4 col-md-3 col-lg-2 single-album-item d m">
+                    <div class="single-album">
+                        <img src="img/bg-img/a10.jpg" alt="DJ SMITH - The Album kapak">
+                        <div class="album-info">
+                            <a href="#"><h5>DJ SMITH</h5></a>
+                            <p>The Album</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Album -->
+                
+
+                <!-- Single Album -->
+                
+
+            </div>
+        </div>
+    </section>
+    <!-- ##### Album Category Area End ##### -->
+
+    <!-- ##### Buy Now Area Start ##### -->
+    <div class="oneMusic-buy-now-area mb-100">
+        <div class="container">
+            <div class="row">
+
+                <!-- Single Album Area -->
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="single-album-area">
+                        <div class="album-thumb">
+                            <img src="img/bg-img/b1.jpg" alt="Garage Band - Radio Station kapak">
+                            <!-- Album Price -->
+                            <div class="album-price">
+                                <p>90TL</p>
+                            </div>
+                            <!-- Play Icon -->
+                            <div class="play-icon">
+                                <a href="#" class="video--play--btn" aria-label="Oynat"><span class="icon-play-button"></span></a>
+                            </div>
+                        </div>
+                        <div class="album-info">
+                            <a href="#"><h5>Garage Band</h5></a>
+                            <p>Radio Station</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Album Area -->
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="single-album-area">
+                        <div class="album-thumb">
+                            <img src="img/bg-img/b2.jpg" alt="Noises - Buble Gum kapak">
+                        </div>
+                        <div class="album-info">
+                            <a href="#"><h5>Noises</h5></a>
+                            <p>Buble Gum</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Album Area -->
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="single-album-area">
+                        <div class="album-thumb">
+                            <img src="img/bg-img/b3.jpg" alt="Jess Parker - The Album kapak">
+                        </div>
+                        <div class="album-info">
+                            <a href="#"><h5>Jess Parker</h5></a>
+                            <p>The Album</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Album Area -->
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="single-album-area">
+                        <div class="album-thumb">
+                            <img src="img/bg-img/b4.jpg" alt="Noises - Buble Gum kapak">
+                        </div>
+                        <div class="album-info">
+                            <a href="#"><h5>Noises</h5></a>
+                            <p>Buble Gum</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="load-more-btn text-center">
+                        <a href="#" class="btn oneMusic-btn">Daha Fazla Yükle <i class="fa fa-angle-double-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### Buy Now Area End ##### -->
+
+    <!-- ##### Add Area Start ##### -->
+    
+    <!-- ##### Add Area End ##### -->
+
+    <!-- ##### Song Area Start ##### -->
+    <div class="one-music-songs-area mb-70">
+        <div class="container">
+            <div class="row">
+
+                <!-- Single Song Area -->
+                <div class="col-12">
+                    <div class="single-song-area mb-30 d-flex flex-wrap align-items-end">
+                        <div class="song-thumbnail">
+                            <img src="img/bg-img/mnfstvl.jpg" alt="Şarkı kapak">
+                        </div>
+                        <div class="song-play-area">
+                            <div class="song-name">
+                                <p>Manifest - Outro</p>
+                            </div>
+                            <audio preload="auto" controls>
+                                <source src="audio/dummy-audio.mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Song Area -->
+                <div class="col-12">
+                    <div class="single-song-area mb-30 d-flex flex-wrap align-items-end">
+                        <div class="song-thumbnail">
+                            <img src="img/bg-img/s2.jpg" alt="Şarkı kapak">
+                        </div>
+                        <div class="song-play-area">
+                            <div class="song-name">
+                                <p>02. Hit Parça</p>
+                            </div>
+                            <audio preload="auto" controls>
+                                <source src="audio/dummy-audio.mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Song Area -->
+                <div class="col-12">
+                    <div class="single-song-area mb-30 d-flex flex-wrap align-items-end">
+                        <div class="song-thumbnail">
+                            <img src="img/bg-img/s3.jpg" alt="Şarkı kapak">
+                        </div>
+                        <div class="song-play-area">
+                            <div class="song-name">
+                                <p>03. Yeni Çıkan</p>
+                            </div>
+                            <audio preload="auto" controls>
+                                <source src="audio/dummy-audio.mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Song Area -->
+                <div class="col-12">
+                    <div class="single-song-area mb-30 d-flex flex-wrap align-items-end">
+                        <div class="song-thumbnail">
+                            <img src="img/bg-img/s4.jpg" alt="Şarkı kapak">
+                        </div>
+                        <div class="song-play-area">
+                            <div class="song-name">
+                                <p>04. Favori</p>
+                            </div>
+                            <audio preload="auto" controls>
+                                <source src="audio/dummy-audio.mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- ##### Song Area End ##### -->
+
+    <!-- ##### Contact Area Start ##### -->
+    <section class="contact-area section-padding-100 bg-img bg-overlay bg-fixed has-bg-img" style="background-image: url(img/bg-img/bg-2.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading white">
+                        <p>Günceli keşfet</p>
+                        <h2>İletişime Geç</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <!-- Contact Form Area -->
+                    <div class="contact-form-area">
+                        <form action="#" method="post" onsubmit="event.preventDefault(); alert('Mesajınız alındı (simülasyon).'); this.reset();">
+                            <div class="row">
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="name" placeholder="Ad Soyad" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" id="email" placeholder="E-posta" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="subject" placeholder="Konu" required>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <textarea name="message" class="form-control" id="message" cols="30" rows="10" placeholder="Mesajınız" required></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <button class="btn oneMusic-btn mt-30" type="submit">Gönder <i class="fa fa-angle-double-right"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### Contact Area End ##### -->
+
+    <!-- ##### Footer Area Start ##### -->
+    <footer class="footer-area" style="background-color: #000; padding: 80px 0 30px;">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-12 col-md-4 mb-50">
+                    <a href="index.html" style="display: flex; align-items: center; text-decoration: none; margin-bottom: 20px;">
+                        <svg width="30" height="30" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="margin-right: 10px;">
+                            <circle cx="50" cy="50" r="48" stroke="white" stroke-width="4" fill="none" />
+                            <path d="M35 65a10 10 0 1 0 20 0V35h15v-10h-25z" fill="white" />
+                        </svg>
+                        <span style="font-family: 'Archivo Narrow', sans-serif; font-weight: 700; font-size: 18px; color: #fff; letter-spacing: 2px; text-transform: uppercase;">
+                            MÜZİK<span style="font-weight: 300;">ATÖLYEM</span>
+                        </span>
+                    </a>
+                    <p style="color: #787878; line-height: 1.8; font-size: 14px;">
+                        Müzik Atölyem, 2010 yılından beri notaların gücüne inananlar için kurulmuş dijital bir platformdur. En güncel albümler, konser haberleri ve sanatçı biyografileriyle müziğin kalbi burada atıyor.
+                    </p>
+                </div>
+
+                <div class="col-12 col-md-4 mb-50">
+                    <h5 style="color: #fff; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 2px; font-size: 16px;">Hızlı Erişim</h5>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 10px;"><a href="index.html" style="color: #787878; font-size: 14px;">Ana Sayfa</a></li>
+                        <li style="margin-bottom: 10px;"><a href="kurumsal.html" style="color: #787878; font-size: 14px;">Kurumsal</a></li>
+                        <li style="margin-bottom: 10px;"><a href="albums-store.html" style="color: #787878; font-size: 14px;">Albümler</a></li>
+                        <li style="margin-bottom: 10px;"><a href="event.html" style="color: #787878; font-size: 14px;">Etkinlikler & Konserler</a></li>
+                        <li style="margin-bottom: 10px;"><a href="contact.html" style="color: #787878; font-size: 14px;">İletişim</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md-4 mb-50">
+                    <h5 style="color: #fff; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 2px; font-size: 16px;">Bize Ulaşın</h5>
+                    
+                    <p style="color: #787878; margin-bottom: 10px; font-size: 14px;">
+                        <i class="fa fa-map-marker" style="margin-right: 10px;"></i> Caferağa Mah. Moda Cad. No:42<br>
+                        <span style="margin-left: 20px;">Kadıköy / İstanbul</span>
+                    </p>
+                    <p style="color: #787878; margin-bottom: 10px; font-size: 14px;">
+                        <i class="fa fa-phone" style="margin-right: 10px;"></i> +90 (216) 555 44 33
+                    </p>
+                    <p style="color: #787878; margin-bottom: 30px; font-size: 14px;">
+                        <i class="fa fa-envelope" style="margin-right: 10px;"></i> info@muzikatolyem.com
+                    </p>
+
+                    <div class="footer-social-info">
+                        <a href="#" style="color: #fff; margin-right: 15px; font-size: 16px;"><i class="fa fa-instagram"></i></a>
+                        <a href="#" style="color: #fff; margin-right: 15px; font-size: 16px;"><i class="fa fa-twitter"></i></a>
+                        <a href="#" style="color: #fff; margin-right: 15px; font-size: 16px;"><i class="fa fa-youtube-play"></i></a>
+                        <a href="#" style="color: #fff; font-size: 16px;"><i class="fa fa-spotify"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div style="border-top: 1px solid #333; margin-top: 20px; padding-top: 20px; text-align: center;">
+                        <p class="copywrite-text" style="margin-bottom: 0;">
+                            Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                            Tüm hakları saklıdır | Tasarım & Kodlama: <a href="#" style="color: #fff; font-weight: bold;">Eren Dağlı</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ##### Footer Area End ##### -->
+
+    <!-- ##### All Javascript Script ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="js/bootstrap/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <!-- All Plugins js -->
+    <script src="js/plugins/plugins.js"></script>
+    <!-- Active js -->
+    <script src="js/active.js"></script>
+</body>
+</html>
